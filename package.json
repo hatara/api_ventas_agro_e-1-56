@@ -1,0 +1,28 @@
+{
+  "name": "api_ventas_agro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "devbabel": "nodemon app.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "api": "^3.4.2",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fallback": "^1.0.1",
+    "history": "^5.0.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8"
+  }
+}
