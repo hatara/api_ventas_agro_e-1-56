@@ -1,0 +1,15 @@
+//cadena de conexión
+mongodb+srv://ventas-agro:ventasagroCampo123@cluster0.crdjk.mongodb.net/ventasAgro_MA?retryWrites=true&w=majority
+
+
+
+cuando ya tengas heroku
+coloca esto de primeras, debajo de script
+"start": "babel-node app.js --exec",
+
+Luego sigue los pasos de Heroku
+lo encuentras cuando cimenzas a crear la app
+
+
+verificar antes de subir 
+heroku local web
