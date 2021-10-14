@@ -14,6 +14,7 @@
     "api": "^3.4.2",
     "babel-cli": "^6.26.0",
     "connect": "^3.7.0",
+    "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fallback": "^1.0.1",

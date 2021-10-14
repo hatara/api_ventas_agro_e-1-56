@@ -4,13 +4,15 @@ const Schema = mongoose.Schema;
     //Estructura del esquema cliente
     const clienteSchema = new Schema (
         {
-            "identificacion" : { type: Number, required: [true, 'Id requerido']},
-            "nombre" : { type: String, required: [true, 'Nombre requerido']},
+            "nombres" : { type: String, required: [true, 'Nombre requerido']},
+            "apodo" : String,
             "email" : { type: String, required: [true, 'Email requerido']},
             "contrasena" : { type: String, required: [true, 'Contraseña requerida']},
-            "celular" : { type: Number, required: [true, 'Celular requerido']},
+            "c_contrasena" : { type: String, required: [true, 'Contraseña requerida']},
+            "tipo_doc" : { type: Number, required: [true, 'Id requerido']},
+            "numero_doc" : { type: Number, required: [true, 'Id requerido']},
+            "telefono" : { type: Number, required: [true, 'Celular requerido']},
             "direccion" : { type: String, required: [true, 'Dirección requerida']},
-            "imagen" : String
         }
     )
 

@@ -8,7 +8,7 @@ const app = express();
 // Conexión base de datos
 const mongoose = require('mongoose');
 //const uri = 'mongodb://localhost:27017/ventas-agro';
-//const uri = 'mongodb+srv://ventas-agro:ventasagroCampo123@cluster0.crdjk.mongodb.net/ventasAgro_MA?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://ventas-agro:ventasagroCampo123@cluster0.crdjk.mongodb.net/ventasAgro_MA?retryWrites=true&w=majority';
 const options = {useNewUrlParser: true, useUnifiedTopology: true};
 
 mongoose.connect(uri, options).then(
@@ -28,11 +28,10 @@ app.get('/', function (req, res) {
     });
 
 app.use('/api', require('./routes/producto'));
-// app.use('/api', require('./routes/cliente'));
+app.use('/api', require('./routes/cliente'));
 
 // Middleware para Vue.js router modo history
 const history = require('connect-history-api-fallback');
-//const history = require('connect');
 app.use(history());
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('puerto', process.env.PORT || 3000);
