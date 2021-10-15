@@ -10,11 +10,13 @@ const Schema = mongoose.Schema;
             contrasena : String,
             c_contrasena : String,
             tipo_doc : String,
-            numero_doc : Number,
+            numero_doc : String,
             telefono : Number,
             direccion: String
         }
     )
+
+    
     
 
     // Creación del modelo cliente

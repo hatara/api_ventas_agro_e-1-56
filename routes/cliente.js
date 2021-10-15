@@ -20,19 +20,19 @@ router.post('/nuevo-cliente', async(req, res) => {
 })
 
 
-// Ruta para consultar cliente
-// router.get('/cliente', async(req, res) => {
-//     try{
-//         const clienteDB = await Cliente.find();
-//         res.json(clienteDB);
-//     } catch (error){
-//         return res.status(400).json({
-//             mensaje: '¡UPS! Algo salió mal con la consulta',
-//             error
-//         })
-//     }
-// });
-
+// Ruta para buscar cliente
+router.get('/cliente/:email', async(req, res) => {
+    const email = req.params.email;
+    try {
+        const clienteDB = await Cliente.findOne({email});
+        res.json(clienteDB);
+    } catch (error) {
+        return res.status(400).json({
+            mensaje: 'Ocurrió un error al buscar cliente',
+            error
+        })
+    }
+});
 
 
 //Exportar configuración
