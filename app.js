@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 });
 app.use('/api', require('./routes/categoria'));
 app.use('/api', require('./routes/producto'));
-app.use('/api', require('./routes/nuevo_cliente'));
+app.use('/api', require('./routes/cliente'));
 app.use('/api', require('./routes/pedido'));
 app.use('/api', require('./routes/detalle_pedido'));
 
