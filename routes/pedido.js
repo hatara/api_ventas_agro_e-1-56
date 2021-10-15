@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 
 //Importar el modelo
-import Producto from '../models/pedido';
+import Pedido from '../models/pedido';
 
 // Ruta para consultar pedidos
 router.get('/pedido', async(req, res) => {

@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 
 //Importar el modelo
-import Producto from '../models/cliente';
+import Cliente from '../models/cliente';
 
 //Ruta para crear cliente
 router.post('/nuevo-cliente', async(req, res) => {

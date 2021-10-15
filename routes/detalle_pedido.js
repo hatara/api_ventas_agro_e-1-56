@@ -2,12 +2,12 @@ import express from 'express';
 const router = express.Router();
 
 //Importar el modelo
-import Producto from '../models/detalle_pedido';
+import DetallePedido from '../models/detalle_pedido';
 
 // Ruta para consultar detalle pedido
 router.get('/detalle_pedido', async(req, res) => {
     try{
-        const detalle_pedidoDB = await Detalle_pedido.find();
+        const detalle_pedidoDB = await DetallePedido.find();
         res.json(detalle_pedidoDB);
     } catch (error){
         return res.status(400).json({

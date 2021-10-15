@@ -25,10 +25,12 @@ app.use(express.urlencoded({ extended: true }));
 // Rutas
 app.get('/', function (req, res) {
     res.send('Hola Mundo mundial!');
-    });
-
+});
+app.use('/api', require('./routes/categoria'));
 app.use('/api', require('./routes/producto'));
-app.use('/api', require('./routes/cliente'));
+app.use('/api', require('./routes/nuevo_cliente'));
+app.use('/api', require('./routes/pedido'));
+app.use('/api', require('./routes/detalle_pedido'));
 
 // Middleware para Vue.js router modo history
 const history = require('connect-history-api-fallback');
